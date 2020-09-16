@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "sw__feeder"
+version = "0.1.0"
+description = ""
+authors = ["Daniel Mack <daniel.mack@holoplot.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = "^0.61.1"
+uvicorn = "^0.11.8"
+sqlalchemy = "^1.3.19"
+alembic = "^1.4.3"
+python-dotenv = "^0.13.0"
+boto3 = "^1.14.61"
+python-multipart = "^0.0.5"
+parsedatetime = "^2.6"
+
+[tool.poetry.extras]
+pgsql = ["psycopg2"]
+precompiled = ["psycopg2-binary"]
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
